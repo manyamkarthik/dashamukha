@@ -1,0 +1,16 @@
+{
+  "engine": "claude",
+  "engines": {
+    "claude": { "type": "claude-code", "model": "sonnet" },
+    "local": { "type": "openai", "baseUrl": "http://localhost:11434/v1", "model": "qwen3:14b" }
+  },
+  "heads": {
+    "krodha": { "model": "opus" },
+    "bhaya": { "engine": "local" }
+  },
+  "ravana": { "model": "opus" },
+  "rounds": { "clash": true, "regrow": true },
+  "words": 90,
+  "concurrency": 5,
+  "port": 4310
+}

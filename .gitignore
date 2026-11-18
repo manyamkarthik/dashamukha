@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+dashamukha.config.json
+
+# Full-size portrait originals (the viewer uses the 512px copies)
+web/heads/_source/

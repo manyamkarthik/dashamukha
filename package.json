@@ -1,0 +1,41 @@
+{
+  "name": "dashamukha",
+  "version": "0.2.0",
+  "description": "Ten heads, one decision. A council of ten agents modelled on Ravana's ten heads, run from Claude Code or any agent harness.",
+  "type": "module",
+  "bin": {
+    "dashamukha": "bin/dashamukha.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node bin/dashamukha.js run \"Should we open-source our core product?\" --demo",
+    "doctor": "node bin/dashamukha.js doctor",
+    "view": "node bin/dashamukha.js view"
+  },
+  "files": [
+    "bin",
+    "src",
+    "heads",
+    "web",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md",
+    "LICENSE",
+    "dashamukha.config.example.json"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "multi-agent",
+    "llm",
+    "claude-code",
+    "agents",
+    "debate",
+    "council",
+    "ravana",
+    "ollama",
+    "openrouter"
+  ],
+  "license": "MIT"
+}

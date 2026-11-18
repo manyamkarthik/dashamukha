@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashamukha · the council</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230B1C20'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23D9A441' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23DA7C2F'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Dashamukha">
+      <span class="brand-seal" aria-hidden="true"></span>
+      <span>Dashamukha</span>
+    </a>
+    <nav class="navcard" aria-label="Councils">
+      <label class="sr-only" for="sessions">Past councils</label>
+      <select id="sessions"><option value="">No councils yet</option></select>
+      <a class="pill" href="https://github.com/manyamkarthik/dashamukha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow" id="eyebrow">Ten heads. One decision.</p>
+      <h1 id="question">Ask the ten heads.</h1>
+      <p class="meta" id="meta"></p>
+    </section>
+
+    <section class="theatre" id="theatre" aria-label="The council">
+      <ol class="rail" id="rail" aria-label="Rounds">
+        <li data-phase="speak"><i>I</i>Speak</li>
+        <li data-phase="clash"><i>II</i>Clash</li>
+        <li data-phase="regrow"><i>III</i>Regrow</li>
+        <li data-phase="verdict"><i>IV</i>Verdict</li>
+      </ol>
+      <button type="button" class="sound" id="sound" aria-pressed="false" title="Sound effects">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="waves" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="mute" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>Sound</span>
+      </button>
+      <div class="stage-wrap" id="stage-wrap">
+        <canvas id="stage" role="img" aria-label="Ravana's ten heads on one body"></canvas>
+        <div class="bubble" id="bubble" hidden></div>
+        <div class="title-card" id="title-card" aria-hidden="true"><p class="tc-num"></p><p class="tc-name"></p><p class="tc-sub"></p></div>
+      </div>
+      <p class="seal-label" id="seal-label">Ravana is listening</p>
+      <div class="voice" id="voice" aria-live="polite">
+        <p class="voice-idle" id="voice-idle">The council is assembled.</p>
+      </div>
+      <p class="hint">Drag a head and let go. Click one to hear its point again.</p>
+      <button type="button" class="replay" id="replay" hidden>Replay council</button>
+    </section>
+
+    <section class="start" id="start" hidden>
+      <div class="start-card">
+        <p class="eyebrow">Start a council from your agent</p>
+        <p>Inside this repo, in Claude Code:</p>
+        <pre><code>/council Should we rewrite our backend in Rust this quarter?</code></pre>
+        <p>Or from any terminal:</p>
+        <pre><code>node bin/dashamukha.js run "Should we rewrite our backend in Rust?"</code></pre>
+        <p class="muted">This page follows along on its own. Keep it open.</p>
+      </div>
+    </section>
+
+    <section class="report" id="report" hidden aria-label="Ravana's verdict">
+      <div class="r-top">
+        <p class="r-eyebrow">Ravana's verdict</p>
+        <div class="row">
+          <button type="button" class="btn-ghost" id="copy-md">Copy markdown</button>
+          <button type="button" class="btn-ghost" id="download-md">Download .md</button>
+        </div>
+      </div>
+      <h2 class="r-verdict" id="r-verdict"></h2>
+      <div class="r-sway" id="r-sway" hidden></div>
+      <div class="r-steps" id="r-steps" hidden><p class="r-label">Do this next</p><ol id="r-steps-list"></ol></div>
+      <div class="r-grid">
+        <div class="r-risks" id="r-risks" hidden><p class="r-label">Watch out for</p><ul id="r-risks-list"></ul></div>
+        <div class="r-dissent" id="r-dissent" hidden><p class="r-label">Strongest dissent</p><blockquote id="r-dissent-text"></blockquote></div>
+      </div>
+      <details class="r-why" id="r-why" hidden><summary>Why Ravana decided this</summary><div id="r-why-body"></div></details>
+      <div class="r-raw" id="r-raw" hidden></div>
+    </section>
+
+    <details class="argued" id="argued" hidden>
+      <summary><span class="a-faces" id="a-faces"></span><span>How the ten heads argued</span></summary>
+      <section class="board-sec" aria-label="Where the heads stand">
+        <div class="sec-title"><h3>Where the heads stand</h3><p>One headline each. Click a head for everything it said.</p></div>
+        <div class="board" id="board"></div>
+      </section>
+      <section class="clash-sec" id="clash-sec" hidden aria-label="Who answered whom">
+        <div class="sec-title"><h3>Who hit whom</h3><p><span class="k-dis">✕ disagrees</span> <span class="k-agr">✓ agrees</span></p></div>
+        <ol class="edges" id="edges"></ol>
+      </section>
+      <details class="full" id="full">
+        <summary>Every word, round by round</summary>
+        <section class="feed" id="feed" aria-label="Transcript"></section>
+      </details>
+    </details>
+  </main>
+
+  <footer class="footer">
+    <span>Dashamukha · MIT</span>
+    <span class="muted">Kama · Krodha · Moha · Lobha · Mada · Ahamkara · Matsarya · Ghrina · Bhaya · Buddhi</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
