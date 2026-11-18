@@ -22,7 +22,9 @@ https://github.com/user-attachments/assets/2f3368a3-5636-4aa8-a1ec-71f3ba16768f
 - **Verdict.** The heads Ravana listened to pour light into the core, and the decision lands with a gong.
 - **The report.** One verdict, the heads that swayed it, three next steps, the risks and the strongest dissent. Copy it as markdown.
 
-| Head | | Lens |
+<div align="center">
+
+| Head | Means | Lens |
 |---|---|---|
 | **Kama** काम | Desire | What do we truly want? |
 | **Krodha** क्रोध | Anger | The furious critic. Attacks weak reasoning. |
@@ -34,6 +36,8 @@ https://github.com/user-attachments/assets/2f3368a3-5636-4aa8-a1ec-71f3ba16768f
 | **Ghrina** घृणा | Disgust | What people will hate. What to cut. |
 | **Bhaya** भय | Fear | Risks and irreversible moves. |
 | **Buddhi** बुद्धि | Intellect | Evidence and the deciding experiment. |
+
+</div>
 
 ## Use it from your agent
 
