@@ -4,13 +4,17 @@
 
 Ravana had ten heads, and each one thought differently. Dashamukha puts your hard question before ten AI agents, one per head. They speak, argue with each other, grow back stronger when they get cut down, and then Ravana gives the verdict. You watch it happen live in your browser.
 
+**The question put to the council:**
+
+> *"I'm a solo developer with a full-time job, 10 hours a week and $3,000 saved. Should I build a paid SaaS, grow an audience first, or freelance AI integration?"*
+
 https://github.com/user-attachments/assets/2f3368a3-5636-4aa8-a1ec-71f3ba16768f
 
 <p align="center"><sub>A real council, replayed. Turn the sound on. (No video player? <a href="docs/demo.gif">Here is a GIF</a>.)</sub></p>
 
-> *"I'm a solo developer with a full-time job, 10 hours a week and $3,000 saved. Build a paid SaaS, grow an audience first, or freelance AI integration?"*
->
-> **Ravana:** Drop the meeting-notes SaaS. Sell agencies one fixed-price AI integration package within 30 days, then turn what they buy repeatedly into code.
+**Ravana's verdict:**
+
+> Drop the meeting-notes SaaS. Sell agencies one fixed-price AI integration package within 30 days, then turn what they buy repeatedly into code.
 
 - **Speak.** Each head lights up and gives its point in six words. The full answer is one click away.
 - **Clash.** Disagreements fly as comets and knock heads off their pedestals. Agreements pull allies together with gold threads.
