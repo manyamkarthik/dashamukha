@@ -4,10 +4,9 @@
 
 Ravana had ten heads, and each one thought differently. Dashamukha puts your hard question before ten AI agents, one per head. They speak, argue with each other, grow back stronger when they get cut down, and then Ravana gives the verdict. You watch it happen live in your browser.
 
-<p align="center">
-  <a href="docs/demo.mp4"><img src="docs/demo.gif" alt="Ten heads in a ring around Ravana argue a real question: comets fly between rivals, cut heads grow back, and the verdict lands in the core" width="760"></a>
-</p>
-<p align="center"><sub>A real council, replayed. <b><a href="docs/demo.mp4">▶ Watch it with sound</a></b></sub></p>
+https://github.com/user-attachments/assets/2f3368a3-5636-4aa8-a1ec-71f3ba16768f
+
+<p align="center"><sub>A real council, replayed. Turn the sound on. (No video player? <a href="docs/demo.gif">Here is a GIF</a>.)</sub></p>
 
 > *"I'm a solo developer with a full-time job, 10 hours a week and $3,000 saved. Build a paid SaaS, grow an audience first, or freelance AI integration?"*
 >
